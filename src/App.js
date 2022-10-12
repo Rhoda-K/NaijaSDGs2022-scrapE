@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import styled from "styled-components";
 import "./App.css";
 import { Declutter, SplashScreen, Earn, Ease, Login, Register } from "./pages";
+import { protectedRoutes } from "./routes";
 
 const Wrapper = styled.div`
   background-color: #fff;
@@ -24,6 +25,10 @@ function App() {
           <Route path="/splash-three" element={<Ease />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+
+          {protectedRoutes.map((route) => (
+            <Route key={route.path} path={route.path} element={route.element} />
+          ))}
         </Routes>
       </Wrapper>
     </div>

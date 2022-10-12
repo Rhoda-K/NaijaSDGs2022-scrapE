@@ -11,7 +11,7 @@ const Container = styled.div`
 const Input = styled.input`
   border: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 4px;
-  height: ${({ height }) => height || "40px"};
+  height: ${({ height }) => height || "4rem"};
   width: ${({ width }) => width || "100%"};
   padding: 8px 16px;
   box-sizing: border-box;
@@ -31,6 +31,7 @@ const TextInputWithLabel = ({
   top,
   bottom,
   type = "text",
+  width
 }) => {
   return (
     <Container top={top} bottom={bottom}>
@@ -40,6 +41,7 @@ const TextInputWithLabel = ({
         placeholder={placeholder}
         type={type}
         onChange={handleChange}
+        width={width}
       />
     </Container>
   );
