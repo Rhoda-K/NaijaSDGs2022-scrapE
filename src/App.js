@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import * as React from "react";
+import { Routes, Route } from "react-router-dom";
+import styled from "styled-components";
+import "./App.css";
+import { Declutter, SplashScreen, Earn, Ease, Login, Register } from "./pages";
+
+const Wrapper = styled.div`
+  background-color: #fff;
+  margin: 0 auto;
+  max-width: 36rem;
+  overflow-x: hidden;
+  height: 100vh;
+  /* padding-top: 1.94rem; */
+`;
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Wrapper>
+        <Routes>
+          <Route path="/" element={<SplashScreen />} />
+          <Route path="/splash-one" element={<Declutter />} />
+          <Route path="/splash-two" element={<Earn />} />
+          <Route path="/splash-three" element={<Ease />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+        </Routes>
+      </Wrapper>
     </div>
   );
 }
