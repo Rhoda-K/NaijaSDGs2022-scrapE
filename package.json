@@ -10,14 +10,9 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.2",
     "react-scripts": "5.0.1",
-<<<<<<< HEAD
     "web-vitals": "^2.1.4",
-    "@supabase/supabase-js": "^1.35.3"
-
-=======
-    "styled-components": "^5.3.6",
-    "web-vitals": "^2.1.4"
->>>>>>> 2c86ba02830b79e3b949c1787e0922ca3306ba0c
+    "@supabase/supabase-js": "^1.35.3",
+    "styled-components": "^5.3.6"
   },
   "scripts": {
     "start": "react-scripts start",
