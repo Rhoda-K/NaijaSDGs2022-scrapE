@@ -42,7 +42,7 @@ const Login = () => {
       </Text>
 
       <FlexRowCentered top="6rem" bottom="3.7rem">
-        <Button width="200px" onClick={() => navigate("/home")}>
+        <Button width="200px" onClick={() => navigate("/sell")}>
           Login
         </Button>
       </FlexRowCentered>

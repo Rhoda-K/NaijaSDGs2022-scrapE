@@ -1,14 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 
-import {
-  CenteredContainer,
-} from "../../components/containers/ScreenContainers";
+import { CenteredContainer } from "../../components/containers/ScreenContainers";
 import { ReactComponent as PageIcon } from "../../assets/images/ease.svg";
-import { PageTitle, Text } from "../../components/containers/MesssageContainers";
+import {
+  PageTitle,
+  Text,
+} from "../../components/containers/MesssageContainers";
 import { useNavigate } from "react-router-dom";
 import { Button } from "../../components/button";
 import { FlexCentredCol } from "../../components/containers/ScreenContainers";
+import colors from "../../styles/variables";
 
 const Container = styled.div`
   height: 100%;
@@ -32,8 +34,17 @@ const Ease = () => {
           Pick up options available at your time and date
         </Text>
         <ButtonContainer>
-          <Button onClick={() => navigate("/login")}>Login</Button>
-          <Button onClick={() => navigate("/register")}>Register</Button>
+          <Button color={colors.grey3} onClick={() => navigate("/login")}>
+            Login
+          </Button>
+          <Button
+            bgColor={"#fff"}
+            border={`1px solid ${colors.yellow}`}
+            color={colors.grey}
+            onClick={() => navigate("/register")}
+          >
+            Register
+          </Button>
         </ButtonContainer>
       </CenteredContainer>
     </Container>

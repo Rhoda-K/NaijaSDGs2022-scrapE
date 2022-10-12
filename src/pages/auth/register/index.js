@@ -1,5 +1,4 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
 import { Button } from "../../../components/button";
 import { ReactComponent as LineIcon } from "../../../assets/icons/line.svg";
 import { ReactComponent as Line2Icon } from "../../../assets/icons/line2.svg";
@@ -18,9 +17,10 @@ import {
 } from "../../../components/containers/ScreenContainers";
 import TextInputWithLabel from "../../../components/inputs/textinput";
 import colors from "../../../styles/variables";
+import VerifyPhoneNumberOverlay from "../../../components/overlays/verify-phone-number";
 
 const Register = () => {
-  const navigate = useNavigate();
+  const [showverifyphone, setShowverifyphone] = useState(true);
   return (
     <ScreenContainer>
       <PageTitle color={colors.lightGreen}>Register Your Account</PageTitle>
@@ -54,11 +54,11 @@ const Register = () => {
       />
 
       <FlexRowCentered top="3rem" bottom=".9rem">
-        <Button width="200px" onClick={() => navigate("")}>
+        <Button width="200px" onClick={() => setShowverifyphone(true)}>
           Next
         </Button>
       </FlexRowCentered>
-      <Text size="1rem" bottom='3.1rem'>
+      <Text size="1rem" bottom="3.1rem">
         By continuing, you agree with our Terms of Service and Privacy Policy
       </Text>
       <FlexRowCentered>
@@ -74,6 +74,10 @@ const Register = () => {
         <AppleIcon />
         <FacebookIcon />
       </FlexRowCentered>
+      <VerifyPhoneNumberOverlay
+        openModal={showverifyphone}
+        onClose={() => setShowverifyphone(false)}
+      />
     </ScreenContainer>
   );
 };

@@ -15,6 +15,7 @@ const Container = styled.div`
   height: ${({ height }) => height || null};
   margin-top: ${({ top }) => top || null};
   margin-bottom: ${({ bottom }) => bottom || null};
+  gap: ${({ gap }) => gap || null};
 `;
 
 export const CentredBox = styled(Container)`
