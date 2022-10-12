@@ -75,7 +75,7 @@ const ProcessSale = () => {
               <UploadFile onChange={() => setShowUpload(true)} />
             )}
 
-            <FlexRowSpaceBetween gap={"3rem"} top="7.6rem">
+            <FlexRowSpaceBetween gap={"3rem"} top="7.6rem" padding='0 0 6rem'>
               <Button onClick={() => setShowUpload(false)}>Delete Image</Button>
               <Button
                 bgColor="#fff"

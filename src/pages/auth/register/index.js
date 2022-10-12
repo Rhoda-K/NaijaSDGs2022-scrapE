@@ -20,7 +20,7 @@ import colors from "../../../styles/variables";
 import VerifyPhoneNumberOverlay from "../../../components/overlays/verify-phone-number";
 
 const Register = () => {
-  const [showverifyphone, setShowverifyphone] = useState(true);
+  const [showverifyphone, setShowverifyphone] = useState(false);
   return (
     <ScreenContainer>
       <PageTitle color={colors.lightGreen}>Register Your Account</PageTitle>
